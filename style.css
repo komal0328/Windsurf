@@ -113,9 +113,7 @@ nav {
 
 /*--------------herosection 1----------------*/
 
-.hero-section,
-.hero-section2 {
-  padding-left: 7vw;
+.hero-section {
   padding-right: 7vw;
   background-color: #011c42;
   padding-left: 7vw;
@@ -166,48 +164,128 @@ nav {
   font-size: 20px;
 }
 
-/*-------------------hero section 2----------------*/
+/*-------------------container----------------*/
+.container {
+  background-color: #011c42;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  font-family: "Windsurf primary";
+}
 
-.hero-section-2 {
+.container1 {
+  justify-content: center;
   align-content: center;
   border-bottom: 1px solid rgba(82, 109, 134, 0.5);
 }
 
-.hero2-p1 {
+.c1-p1 {
   color: yellow;
   padding-top: 360px;
 }
 
-.hero2-p2 {
+.c1-p2 {
   color: white;
   font-family: "Windsurf primary";
   font-size: 68px;
 }
 
-.hero2-p3 {
+.c1-p3 {
   padding: 60px 290px;
   color: white;
 }
 
-.hero3-div2 a {
+.container2 {
+  padding-top: 60px;
+  display: flex;
+  color: white;
+  gap: 35px;
+}
+
+.c2-div1 {
+  width: 50%;
+}
+
+.c2-div1 {
+  font-size: 28px;
+}
+
+.c2-div2 {
+  width: 50%;
+}
+
+.c2-div2 a {
   padding: 30px 0;
   color: rgb(251 156 229);
   text-transform: uppercase;
 }
 
-.hero-section-3 {
-  display: flex;
+.container3 video , .container6 video{
+  width: 1270px;
+
+  padding: 60px;
+  border-radius: 20px;
+  outline: #243c5e;
+  outline-width: 5px;
+}
+
+.container4 {
+  justify-content: center;
+  align-content: center;
+  border-bottom: 1px solid rgba(82, 109, 134, 0.5);
+  padding-bottom: 50px;
+}
+
+.c4-p1 {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: 65px;
+
   color: white;
 }
 
-.hero3-div1 {
-  width: 50%;
+.c4-p2 {
+  color: white;
 }
 
-.hero2-div1 {
-  font-size: 40px;
+.container5{
+  padding: 40px 0;
+  display: flex;
+  gap: 40px;
 }
 
-.hero3-div2 {
+.c5-p1, .c5-p2{
   width: 50%;
+
 }
+
+.c5-p1{
+  font-size: 30px;
+  color: white;
+}
+
+.c5-p2{
+  color: white;
+}
+
+.c5-p2 a{
+   color: rgb(251 156 229);
+   padding: 10px 0;
+}
+
+/*------------------grid------------------------*/
+.parent{
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  height: 120vh;
+  background-color: white;
+
+}
+
+.child{
+  background-color: #011c42;
+  grid-auto-rows: 200px;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
