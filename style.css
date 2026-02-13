@@ -14,6 +14,22 @@
   src: url("https://windsurf.com/_next/static/media/13971731025ec697-s.p.woff2");
 }
 
+:root {
+  --primary-color: #011c42;
+  --font-primary: Windsurf primary;
+  --font-secondary: Windsurf secondary;
+  --button-primary: #34e8bb;
+  --anchor-primary: rgb(251 156 229);
+  --anchor-secondary: rgb(250, 200, 238);
+  --font-color: rgb(92 0 71);
+  --hover-color: rgb(249 243 233);
+}
+
+::selection {
+  background-color: var(--button-primary);
+  color: black;
+}
+
 header a {
   color: white;
   text-decoration: none;
@@ -22,12 +38,13 @@ header a {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #011c42;
+  background-color: var(--primary-color);
   height: 11vh;
   align-items: center;
   padding-left: 7vw;
   font-family: "Windsurf secondary";
-
+  position: fixed;
+  width: 100%;
   text-transform: uppercase;
 }
 
@@ -71,7 +88,21 @@ nav {
 .user-icon {
   border: 1px solid white;
   border-radius: 50%;
-  padding: 8px;
+  padding: 7px;
+}
+
+.user-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border 0.15s ease-in-out;
+  padding: 3px;
+}
+
+.user-border:hover {
+  border: 1px solid #34e8bb;
 }
 
 .download-btn {
@@ -114,20 +145,20 @@ nav {
 /*--------------herosection 1----------------*/
 
 .hero-section {
-  padding-right: 7vw;
+  padding: 240px 7vw;
   background-color: #011c42;
-  padding-left: 7vw;
+
   font-family: "Windsurf primary";
 }
 
 .hero1 p {
   color: white;
   font-size: 68px;
-  padding-top: 150px;
 }
 
 .hero2 {
   padding: 50px 0;
+  gap: 20px;
 }
 
 .hero2 .bt1 {
@@ -136,6 +167,7 @@ nav {
   color: black;
   background-color: #34e8bb;
   font-size: 18px;
+  border: none;
 }
 
 .hero2 .bt1:hover {
@@ -145,8 +177,8 @@ nav {
 .hero2 .bt2 {
   padding: 20px 40px;
   border-radius: 4px;
-
-  background-color: rgba(62, 82, 99, 0.5);
+  border: 0.5px solid #384452;
+  background-color: rgba(47, 62, 76, 0.5);
   font-size: 18px;
 }
 
@@ -162,6 +194,41 @@ nav {
 .hero3 ul li {
   color: white;
   font-size: 20px;
+}
+
+.hero3 ul {
+  padding-left: 20px;
+}
+
+.hero3 ul li::marker {
+  color: #34e8bb;
+}
+
+/*----------------marquee----------------*/
+
+.marquee-section {
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: marquee-ani 14s liner infinite;
+}
+
+@keyframes marquee-ani {
+  from {
+    translate: 0%;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.marquee img {
+  width: 100px;
 }
 
 /*-------------------container----------------*/
@@ -180,8 +247,8 @@ nav {
 }
 
 .c1-p1 {
+  padding-top: 120px;
   color: yellow;
-  padding-top: 360px;
 }
 
 .c1-p2 {
@@ -191,7 +258,8 @@ nav {
 }
 
 .c1-p3 {
-  padding: 60px 290px;
+  padding-bottom: 60px;
+  padding: 0 260px 60px 260px;
   color: white;
 }
 
@@ -202,7 +270,8 @@ nav {
   gap: 35px;
 }
 
-.c2-div1 {
+.c2-div1,
+.c2-div2 {
   width: 50%;
 }
 
@@ -210,23 +279,28 @@ nav {
   font-size: 28px;
 }
 
-.c2-div2 {
-  width: 50%;
+.c2-div2 p {
+  padding-bottom: 30px;
 }
 
 .c2-div2 a {
-  padding-top: 30px ;
   color: rgb(251 156 229);
   text-transform: uppercase;
+  font-style: var(--font-primary);
 }
 
-.container3 video , .container6 video{
-  width: 1270px;
+.c2-div2 a:hover {
+  color: rgb(251, 182, 235);
+}
 
-  padding: 60px;
-  border-radius: 20px;
-  outline: #243c5e;
-  outline-width: 5px;
+.container3 video,
+.container6 video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1230px;
+  padding: 70px;
+  border-radius: 10px;
 }
 
 .container4 {
@@ -234,11 +308,11 @@ nav {
   align-content: center;
   text-align: center;
   border-bottom: 1px solid rgba(82, 109, 134, 0.5);
-  padding-bottom: 50px;
+  padding: 60px 0;
 }
 
 .c4-p1 {
-  padding-top: 40px;
+  padding: 30px 0;
   font-size: 65px;
 
   color: white;
@@ -248,45 +322,92 @@ nav {
   color: white;
 }
 
-.container5{
+.container5 {
   padding: 40px 0;
   display: flex;
   gap: 40px;
 }
 
-.c5-p1, .c5-p2{
+.c5-p1,
+.c5-p2 {
   width: 50%;
-
 }
 
-.c5-p1{
+.c5-p1 {
   font-size: 30px;
   color: white;
 }
 
-.c5-p2{
+.c5-p2 p {
   color: white;
+  padding-bottom: 30px;
 }
 
-.c5-p2 a{
-   color: rgb(251 156 229);
-   padding: 10px 0;
+.c5-p2 a {
+  color: rgb(251 156 229);
 }
 
-/*------------------grid------------------------*/
-.parent{
-  display: grid;
-  gap: 30px;
-  justify-content: center;
-  align-content: center;
-  height: 120vh;
-  background-color: white;
 
+/*-----------------trusted developers-------------*/
+
+
+
+/*---------------ceo-----------------*/
+
+.ceo {
+  margin: 1vw;
+  background-color: var(--anchor-secondary);
+  border-radius: 10px;
+  font-family: var(--font-primary);
 }
 
-.child{
-  background-color: #011c42;
-  grid-auto-rows: 200px;
-  grid-template-columns: 200px 200px 200px 200px;
+.ceo-div p {
+  font-size: 60px;
+  color: var(--font-color);
+  padding: 10vw 10vw 6vw 10vw;
+  font-weight: 500;
 }
+
+.ceo-img img {
+  border-radius: 50%;
+  width: 70px;
+}
+
+.ceo-text {
+  padding-top: 3px;
+  width: 93%;
+}
+
+.ceo-img {
+  width: 7%;
+}
+
+.ceo-div2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10vw 10vw;
+}
+
+.ceo-div2 .ceo-p1 {
+  color: black;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ceo-div2 .ceo-p2 {
+  color: orangered;
+  font-size: 17px;
+}
+
+/*-------------------------------*/
+
+.text p {
+  text-align: center;
+  font-size: 18px;
+  font-family: var(--font-secondary);
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
 
