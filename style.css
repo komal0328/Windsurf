@@ -23,6 +23,7 @@
   --anchor-secondary: rgb(250, 200, 238);
   --font-color: rgb(92 0 71);
   --hover-color: rgb(249 243 233);
+  --jetbrain-color: #43045e;
 }
 
 ::selection {
@@ -127,19 +128,31 @@ nav {
   position: relative;
 }
 
-.nav1:hover .box1 {
+.nav1:hover .box1,
+.nav4:hover .box4 {
   display: block;
 }
 
 .box1 {
-  background-color: aquamarine;
+  background-color: var(--hover-color);
   height: 300px;
   width: 500px;
   position: absolute;
-  top: 7vh;
+  top: 6vh;
   left: -4px;
   display: none;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.box4 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-color: var(--hover-color);
+  top: 6vh;
+  border-radius: 5px;
+  display: none;
+  color: black;
 }
 
 /*--------------herosection 1----------------*/
@@ -159,6 +172,7 @@ nav {
 .hero2 {
   padding: 50px 0;
   gap: 20px;
+  display: flex;
 }
 
 .hero2 .bt1 {
@@ -215,7 +229,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 50px;
-  animation: marquee-ani 14s liner infinite;
+  animation: marquee-ani 30s linear infinite;
 }
 
 @keyframes marquee-ani {
@@ -347,10 +361,107 @@ nav {
   color: rgb(251 156 229);
 }
 
-
 /*-----------------trusted developers-------------*/
+.fixed-sec {
+  background-color: var(--font-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 7vw;
+  font-family: var(--font-primary);
+  background-image: url(https://windsurf.com/static/images/homepage/stats_section_wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.fixed1 {
+  width: 35%;
+}
 
+.fixed2 {
+  width: 65%;
+  right: 7vw;
+}
+
+.fixed1 ul li {
+  color: white;
+}
+
+.fixed1 ul li::marker {
+  color: var(--anchor-primary);
+}
+
+.fixed2 p {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+/*----------fixed img----------*/
+
+.box {
+  margin-top: 90px;
+  background-color: var(--hover-color);
+  border-radius: 10px;
+  padding: 50px 40px;
+  width: 800px;
+}
+
+.b1 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  border-bottom: 1px solid #5c004733;
+  padding-bottom: 50px;
+}
+
+.b2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  border-bottom: 1px solid #5c004733;
+  padding: 50px 0;
+}
+
+.b3 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  padding-top: 50px;
+}
+
+.b1-s1,
+.b2-s1,
+.b3-s1,
+.b2-s2,
+.b1-s2,
+.b3-s2 {
+  width: 50%;
+}
+
+.b1-s1 p,
+.b2-s1 p,
+.b3-s1 p {
+  color: var(--font-color);
+  font-size: 90px;
+  font-weight: 500;
+}
+
+.b1-s1 p sup,
+.b2-s1 p sup,
+.b3-s1 p sup {
+  font-weight: 400;
+  font-size: 55px;
+}
+
+.box .b1-s2 p,
+.box .b2-s2 p,
+.box .b3-s2 p {
+  padding-top: 8px;
+  color: var(--font-color);
+  font-size: 16px;
+  font-family: var(--font-primary);
+}
 
 /*---------------ceo-----------------*/
 
@@ -407,7 +518,191 @@ nav {
   font-size: 18px;
   font-family: var(--font-secondary);
   padding-top: 100px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
+.ai {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18vw;
+  padding-bottom: 100px;
+}
 
+/*--------------after ai logo------------------*/
+.plugin {
+  background-color: var(--jetbrain-color);
+  padding: 8vw 7vw;
+  font-family: var(--font-primary);
+}
+
+.plugin-text {
+  align-items: center;
+  justify-items: center;
+}
+
+.plugin-text img {
+  align-self: center;
+  width: 130px;
+  align-items: center;
+  display: flex;
+}
+
+.plugin-text h1 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.plugin-text .plugin-p1 {
+  color: #ffffff;
+  font-size: 50px;
+  padding: 20px 0;
+}
+
+.plugin-text .plugin-p2 {
+  color: #ffffff;
+}
+
+.plugin-text a {
+  color: var(--anchor-primary);
+  font-size: 19px;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  word-spacing: 7px;
+  text-decoration: underline;
+
+  align-items: center;
+  display: flex;
+  padding: 40px;
+}
+
+.plugin-text a:hover {
+  color: var(--hover-color);
+}
+
+.plugin-video video {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+/*---------------------------*/
+.solution-sec {
+  padding: 8vw;
+  background-color: var(--hover-color);
+}
+
+.solution-sec p {
+  font-size: 45px;
+  font-family: var(--font-primary);
+}
+
+.solution-div {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-secondary);
+}
+
+.sol-div1 {
+  height: 93vh;
+  width: 50%;
+  background-color: #43045e;
+  border-radius: 5px;
+  padding: 40px;
+  font-family: var(--font-secondary);
+  background-image: url(https://exafunction.github.io/public/images/waves/link_card_waves/indigo_wave_desktop.svg);
+}
+
+.sol-div1 .div1-p1 {
+  font-size: 16px;
+  padding: 5px 8px;
+  background-color: var(--anchor-secondary);
+  width: 170px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+}
+
+.sol-div1 .div1-p2 {
+  color: white;
+  font-size: 38px;
+  font-family: var(--font-secondary);
+  padding: 25px 0;
+}
+
+.sol-div1 a,
+.sol-div2 a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  word-spacing: 5px;
+}
+
+.sol-div1 a:hover {
+  color: #9d79ac;
+}
+
+.sol-div2 a:hover {
+  color: rgb(102, 126, 102);
+}
+
+.sol-div2 {
+  width: 50%;
+  background-color: rgb(6, 48, 6);
+  border-radius: 5px;
+  padding: 40px;
+  font-family: var(--font-secondary);
+  height: 93vh;
+  background-image: url(https://exafunction.github.io/public/images/waves/link_card_waves/aqua_wave_desktop.svg);
+}
+
+.sol-div2 .div2-p1 {
+  font-size: 16px;
+  padding: 5px 8px;
+  background-color: rgb(237, 250, 159);
+  width: 170px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+}
+
+.sol-div2 .div2-p2 {
+  color: white;
+  font-size: 38px;
+  font-family: var(--font-secondary);
+  padding: 25px 0;
+}
+
+/*--------------------------*/
+.article {
+  padding: 9vw 7vw;
+}
+
+.article1 {
+  display: flex;
+  justify-content: end;
+}
+
+.art1 {
+  width: 60%;
+}
+
+.art2 {
+  width: 40%;
+}
+
+.art1 {
+  font-size: 47px;
+  font-family: var(--font-primary);
+}
+
+.art2 a {
+  
+  background-color: var(--button-primary);
+  color: black;
+  padding: 15px 60px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: var(--font-secondary);
+}
