@@ -675,14 +675,16 @@ nav {
   padding: 25px 0;
 }
 
-/*--------------------------*/
+/*----------------article  ----------*/
 .article {
-  padding: 9vw 7vw;
+  padding: 9vw 9vw;
 }
 
 .article1 {
   display: flex;
-  justify-content: end;
+
+  padding-bottom: 40px;
+  gap: 420px;
 }
 
 .art1 {
@@ -691,6 +693,7 @@ nav {
 
 .art2 {
   width: 40%;
+  margin-top: 50px;
 }
 
 .art1 {
@@ -705,6 +708,37 @@ nav {
   text-decoration: none;
   font-size: 18px;
   font-family: var(--font-secondary);
+}
+
+.art2 a:hover {
+  background-color: #96f1da;
+}
+
+.grid-sec {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 170px 170px 170px 170px;
+  gap: 8px;
+}
+
+.card1 {
+  background-color: var(--hover-color);
+  grid-row-start: 1;
+  grid-row-end: 5;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card1 img {
+  width: 100%;
+  height: 42vh;
+  overflow: hidden;
+}
+
+.card {
+  background-color: var(--hover-color);
+  border-radius: 5px;
 }
 
 /*------------------footer----------------*/
@@ -768,7 +802,7 @@ footer {
   font-family: var(--font-secondary);
 }
 
-.bt .bt2:hover{
+.bt .bt2:hover {
   color: white;
   border: 1px solid white;
 }
@@ -791,23 +825,24 @@ footer {
   border-bottom: 1px solid #6f849d;
 }
 
-.sec{
+.sec {
   line-height: 35px;
   padding-right: 130px;
 }
 
-.sec .sec-p{
+.sec .sec-p {
   color: var(--footer-font2);
   font-family: var(--font-secondary);
   font-size: 15px;
 }
 
-.sec a i{
+.sec a i {
   color: white;
   font-size: 20px;
 }
 
-.logo1 , .logo2{
+.logo1,
+.logo2 {
   gap: 15px;
   display: flex;
 }
@@ -818,10 +853,9 @@ footer {
   font-size: 13px;
   color: white;
   font-family: var(--font-secondary);
-  
 }
 
-.foot-mid a{
+.foot-mid a {
   text-decoration: none;
 }
 
@@ -837,41 +871,36 @@ footer {
   color: var(--footer-font2);
 }
 
-.sec1 ul a ,
-.sec2 ul a ,
-.sec3 ul a ,
-.sec4 ul a ,
+.sec1 ul a,
+.sec2 ul a,
+.sec3 ul a,
+.sec4 ul a,
 .sec5 ul a {
- text-decoration: none;
+  text-decoration: none;
 }
 
 .sec1 ul a li:hover,
 .sec2 ul a li:hover,
 .sec3 ul a li:hover,
 .sec4 ul a li:hover,
-.sec5 ul a li :hover{
+.sec5 ul a li :hover {
   color: white;
 }
 
-
-.foot-last{
+.foot-last {
   padding-top: 30px;
   display: flex;
   gap: 1030px;
 }
 
-.foot-last-p1{
+.foot-last-p1 {
   font-family: var(--font-secondary);
   color: whitesmoke;
   font-size: 14px;
 }
 
-
-.foot-last-p2{
+.foot-last-p2 {
   font-family: var(--font-secondary);
   color: whitesmoke;
   font-size: 14px;
-  
 }
-
-
