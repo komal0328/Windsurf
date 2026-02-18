@@ -398,6 +398,31 @@ nav {
   font-weight: 500;
 }
 
+/*---------------editor grid--------------*/
+.editor {
+  padding: 7vw 8vw;
+}
+
+.e-div1 {
+  display: flex;
+  gap: 700px;
+}
+
+.e-div1 ul li {
+  font-family: var(--font-secondary);
+}
+
+.e-div1 ul li::marker {
+  color: var(--anchor-primary);
+}
+
+.e-div1 .edi {
+  font-size: 42px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-align: end;
+}
+
 /*----------fixed img----------*/
 
 .box {
@@ -677,7 +702,7 @@ nav {
 
 /*----------------article  ----------*/
 .article {
-  padding: 9vw 9vw;
+  padding: 9vw 13vw;
 }
 
 .article1 {
@@ -728,18 +753,110 @@ nav {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .card1 img {
   width: 100%;
   height: 42vh;
-  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 5px;
 }
 
-.card {
+.card1 img:hover{
+  transform: scale(1.1);
+}
+
+.card, .card2 {
   background-color: var(--hover-color);
   border-radius: 5px;
 }
+
+.card1-bt {
+  display: flex;
+  gap: 8px;
+}
+
+.cards {
+  padding: 30px 20px;
+  font-family: var(--font-secondary);
+}
+
+.card1-bt1 {
+  background-color: black;
+  color: white;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  padding: 4px 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.card1-bt2, .card2-div1 a {
+  background-color: white;
+  color: black;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  padding: 4px 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.card1-p1 {
+  font-size: 19px;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  padding: 25px 0;
+  border-bottom-style: dashed;
+  border-color: #d5d3d3;
+  
+}
+
+.card1-p2{
+  padding-top: 25px;
+  padding-bottom: 110px;
+}
+
+.card1-p3, .card2-p2{
+  color: #8c8b8b;
+  font-family: var(--font-secondary);
+  
+}
+
+.card2 {
+  display: flex;
+  overflow: hidden;
+}
+
+.card2-div1{
+  width: 50%;
+  padding: 20px;
+}
+
+.card2-div2 {
+  width: 50%;
+  
+}
+
+
+.card2-div2 img {
+  width: 320px;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+.card2-div2 img:hover{
+  transform: scale(1.1);
+}
+
+.card2-p1{
+  padding: 20px 0;
+  font-size: 19px;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+
 
 /*------------------footer----------------*/
 
